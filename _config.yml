@@ -1,38 +1,38 @@
 # Site settings
-title: 闫肃的博客
-email: suyan0830@gmail.com
+title: Cheng Li's Blog
+email: licheng019@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  闫肃的博客
+  Cheng Li's Blog
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yansu.org" # the base hostname & protocol for your site
+url: "https://licheng019.github.io/" # the base hostname & protocol for your site
 rss_url: /pages/feed.xml
-author: Su Yan
-twitter:
-  username: masonsuyan
+author: Cheng Li
+# twitter:
+#  username: ""
 
 # Sidebar filter
 # Choose 'tag' or 'category' as filter in sidebar.
 filter: 'category'
 
 # Social account
-twitter: masonsuyan
+# twitter: ""
 # weibo:    ID
-github: suyan
+github: licheng019
 # codepen:  username
 # dribbble: username
 
 # avatar and Favicon
-avatar: http://7u2ho6.com1.z0.glb.clouddn.com/site-avatar.png
+avatar: https://media.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAgFAAAAJDk0MDliODI2LWQzMjItNDc1Yi1hZGRmLTZjMzRjYWY1MDY3YQ.jpg
 favicon: http://7u2ho6.com1.z0.glb.clouddn.com/site-favicon.ico
 
 # disqus config
 disqus:
-  shortname: suyan-zh
+  shortname: licheng019
 
 # google analytics config
 ga:
   id: UA-54767140-2
-  url: yansu.org
+  url: licheng019.github.io/
 
 # Build settings
 permalink: /:year/:month/:day/:title.html
