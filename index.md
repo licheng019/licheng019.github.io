@@ -1,13 +1,11 @@
 ---
-title: Why Blog
+title: My Blog
 layout: post
 ---
 
-## My Understanding about Blog
-
 Currently I am working in Cimpress as senior Software Engineer. I love learning, sharing about technology.
 
-As Learning new things from work and myself everyday. I find that it will be extremly helpful to keep track what I am doing. This can help both of myself and other person as well.
+As Learning new things from work and myself everyday. I feel write down in a blog can be extremely helpful to keep track what I am doing. This also can help someone else who is learning and using the same technology.
 
 
 ## Blog Platform
