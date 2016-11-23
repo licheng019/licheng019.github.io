@@ -13,28 +13,32 @@ configuration file is located at /etc/logrotate.conf.
 Let's look at what inside of the configuration file
 
 #rotate log files frequency
+
 default is weekly, there is daily and monthly
 
 #keep 4 weeks worth of backlogs
+
 rotate 4 (means keep maximum 4 logs)
 
-# see "man logrotate" for details
-# rotate log files weekly
+#see "man logrotate" for details
+
+#rotate log files weekly
+
 weekly
 
-# keep 4 weeks worth of backlogs
+#keep 4 weeks worth of backlogs
 rotate 4
 
-# create new (empty) log files after rotating old ones
+#create new (empty) log files after rotating old ones
 create
 
 #use date as a suffix of the rotated file
 dateext (The log will be saved as xxx.log-20161122)
 
-# uncomment this if you want your log files compressed
+#uncomment this if you want your log files compressed
 compress
 
-# packages drop log rotation information into this directory
+#packages drop log rotation information into this directory
 include /etc/logrotate.d
 
 /var/log/wtmp {
