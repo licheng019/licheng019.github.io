@@ -11,19 +11,28 @@ description: Spark Learning
 ## 1. Virtual Box
 
 1)Download Virtual Box from below <a href="https://www.virtualbox.org/wiki/Downloads">Link</a>
+
 2)Using Centos As the Image.
+
 3)Create three VMs(Spark1, Spark2, Spark3)
+
 4)Setup /etc/sysconfig/network-scripts/ifcfg-eth0 for network
+
 5)turn off firwall(Testing and exercise only)
+
 	service iptables stop
 	chkconfig iptables off
 	vi /etc/selinux/config
 	SELINUX=disabled
+
 6)yum install telnet
+
 7)install java, set up java environment
+
 	export JAVA_HOME=/usr/java/latest
 	export PATH=$PATH:$JAVA_HOME/bin
 	source .bashrc
+	
 8)check jdk working: java -version
 
 ## 2.Hadoop Install
