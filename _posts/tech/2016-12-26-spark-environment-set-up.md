@@ -32,25 +32,33 @@ description: Spark Learning
 	export JAVA_HOME=/usr/java/latest
 	export PATH=$PATH:$JAVA_HOME/bin
 	source .bashrc
-	
+
 8)check jdk working: java -version
 
 ## 2.Hadoop Install
 
 1)download hadoop into /usr/local
+
 2)upzip hadoop file
+
 3)change hadoop folder name to hadoop
+
 4)set up hadoop environment
+
 	vi .bashrc
 	export HADOOP_HOME=/usr/local/hadoop
 	export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin
 	source .bashrc
+
 5)Modify core-site.xml (Set up hdfs cluster for outside)
+
 	<property>
   	  <name>fs.default.name</name>
   	  <value>hdfs://spark1:9000</value>
 	</property>
+
 6)Modify hdfs-site.xml
+
 	<property>
 	  <name>dfs.name.dir</name>
 	  <value>/usr/local/data/namenode</value>
@@ -67,13 +75,16 @@ description: Spark Learning
 	  <name>dfs.replication</name>
 	  <value>3</value>
 	</property>
+
 Manually  create data folder under /usr/local
+
 7)Modify mapred-site.xml
 
 	<property>
 	  <name>mapreduce.framework.name</name>
 	  <value>yarn</value>
 	</property>
+
 8)Modify yarn-site.xml
 
 	<property>
@@ -84,25 +95,31 @@ Manually  create data folder under /usr/local
 	  <name>yarn.nodemanager.aux-services</name>
 	  <value>mapreduce_shuffle</value>
 	</property>
+
 9)Modify slaves file
+
 	spark1
 	spark2
 	spark3
+
 10)copy configuration to spark2, spark3
+
 11)format namenode
-In spark1: run hdfs namenode -format
-start hdfs cluster: start-dfs
-Verify Success: jps(show below name)
-spark1：namenode、datanode、secondarynamenode
-spark2：datanode
-spark3：datanode
-Run spark1:50070 for checking the page
+
+	In spark1: run hdfs namenode -format
+	start hdfs cluster: start-dfs
+	Verify Success: jps(show below name)
+	spark1：namenode、datanode、secondarynamenode
+	spark2：datanode
+	spark3：datanode
+	Run spark1:50070 for checking the page
 
 12)Start yarn cluster
-start-yarn.sh
-Verify Success: jps(show below name)
-spark1：resourcemanager、nodemanager
-spark2：nodemanager
-spark3：nodemanager
-Run spark1:8088 for checking the page
+
+	start-yarn.sh
+	Verify Success: jps(show below name)
+	spark1：resourcemanager、nodemanager
+	spark2：nodemanager
+	spark3：nodemanager
+	Run spark1:8088 for checking the page
 
