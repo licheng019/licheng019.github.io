@@ -2,7 +2,7 @@
 layout: post
 title: January 15-21 2017 Working Notes
 category: Working Notes
-tags: React
+tags: Working Notes
 description: Working Notes for every week
 ---
 
