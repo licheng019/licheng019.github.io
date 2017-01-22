@@ -1,8 +1,8 @@
 ---
 layout: post
 title: January 15-21 2017 Working Notes
-category: Working Notes
-tags: Working Notes
+category: Working_notes
+tags: Working_notes
 description: Working Notes for every week
 ---
 
