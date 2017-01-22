@@ -32,6 +32,7 @@ Name: Remove Application Delivery Control Service dependency on Auspice
 
 Remove the Auspice dependency and Auth0 dependency and test whether all methods are working in both Dev and Prod.
 
+
 ##2 Code review
 
 1) IA-216
@@ -41,6 +42,7 @@ Name: Expire the new hire link once manager finishes submitting the NHRF form
 2) IA-332
 
 Name: Update the Text on the Hardware Request Form to meet global CTS requirements 
+
 
 ##3 Thinking in this week
 
