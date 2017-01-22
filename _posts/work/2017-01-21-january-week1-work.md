@@ -63,7 +63,7 @@ description: Working Notes for every week
 
 	5) Asking for trust, I know my own code better.
 
-## 4. Knowledge Learning
+## 4. Knowledge Learning (Free Time)
 
 1) Ansible
 
