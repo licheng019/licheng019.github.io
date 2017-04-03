@@ -20,6 +20,7 @@ description: Hive Learning(Basic)
 	HIVE_CONF_DIR=/.../hive/conf
 
 3)Config HDFS Folder
+
     fs -mkdir /tmp   -> bin/hdfs dfs -mkdir /tmp
     fs -mkdir /user/hive/warehouse -> bin/hdfs dfs -mkdir -p /user/hive/warehouse
     fs -chmod g+w /tmp -> bin/hdfs dfs -chmod g+x /tmp
