@@ -13,15 +13,22 @@ description: Hive Learning(Basic)
 1)Download Hive from <a href="https://hive.apache.org/downloads.html">Hive Apache Org Website</a>.
 
 2)Config hive-env.sh
+
 Set Up Hadoop_home
+
 HADOOP_HOME =...
+
 Set up HIVE_CONF_DIR
+
 HIVE_CONF_DIR=/.../hive/conf
 
 3)Config HDFS Folder
 fs -mkdir /tmp   -> bin/hdfs dfs -mkdir /tmp
+
 fs -mkdir /user/hive/warehouse -> bin/hdfs dfs -mkdir -p /user/hive/warehouse
+
 fs -chmod g+w /tmp -> bin/hdfs dfs -chmod g+x /tmp
+
 fs -chmod g+w /usr/hive/warehouse ->  bin/hdfs dfs -chmod g+x /usr/hive/warehouse
 
 ## 2.Config MySQL Metastore
