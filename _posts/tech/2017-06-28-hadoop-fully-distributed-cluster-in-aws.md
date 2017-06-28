@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Set up Hadoop fully distributed Cluster on AWS
+title: Set Up Hadoop Fully Distributed Cluster On AWS
 category: Hadoop
 tags: Hadoop
 description: Big Data Learning -- Hadoop
