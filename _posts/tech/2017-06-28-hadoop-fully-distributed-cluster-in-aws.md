@@ -119,6 +119,12 @@ Hdfs-site.xml
 	    <value>1</value>
 	</property>
 
+	<property>
+	    <name>dfs.namenode.secondary.http-address</name> 
+	    <value>address:50090</value>
+	</property>
+
+
 replication is a way by which fault tolerance and recovery is built into Hadoop,default value is 3. 
 
 4). mapred-site.xml
@@ -149,6 +155,10 @@ cp mapred-site.xml.template mapred-site.xml
 	</property>
 
 The basic Configuration is done here. I am going to explore more configuration and detail in the later blog.
+
+6). Slave Nodes
+
+Add all the NameNode address under slaves file.
 
 6). Format NameNode 
 
