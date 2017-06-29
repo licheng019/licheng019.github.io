@@ -99,7 +99,7 @@ This is a configuration common across Hadoop, it’s not component-specific conf
 
 	<property>
         <name>fs.defaultFS</name>
-        <value>hdfs://<address>:9000</value>
+        <value>hdfs://<address>:8020</value>
 	</property>
 	<property>
 		<name>hadoop.tmp.dir</name>
@@ -165,5 +165,19 @@ Before start, the first thing is format the name node. The name node is the mast
 8). How to check whether the Hadoop is running
 
 Open browser, input address:50070, and then you will see the hadoop page.
+
+## 4 Example of How to design the Cluster
+
+hadoop1			hadoop2    			hadoop3
+
+namenode		resourcemanager    	secondaryname
+
+datanode		datanode			datanode (Storage) Hard Drive
+
+nodemanager		nodemanager			nodemanager（Analysis）Resource
+
+historyserver(light)
+
+ResourceManager and NameNode take a lot of on resource. So It better assign to different machine. using above simple table as the reference.
 
 
