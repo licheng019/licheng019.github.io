@@ -200,19 +200,22 @@ Monitor by using ZKFC failover.
 
 2. Modify the core-site.xml
 
-	<property>
-	   <name>ha.zookeeper.quorum</name>
-	   <value>zk1.example.com:2181,zk2.example.com:2181,zk3.example.com:2181</value>
-	</property>
+  <property>
+    <name>ha.zookeeper.quorum</name>
+    <value>zk1.example.com:2181,zk2.example.com:2181,zk3.example.com:2181</value>
+  </property>
 
 3. How to start the set up
 
-	sbin/stop-dfs.sh
-	under zookeeper
-	bin/zkServer.sh start
-	under hadoop
-	bin/hdfs zkfc –formatZK
-	sbin/start-dfs.sh
+  sbin/stop-dfs.sh
+
+  under zookeeper
+  bin/zkServer.sh start
+  
+  under hadoop
+  bin/hdfs zkfc –formatZK
+  sbin/start-dfs.sh
+
 
 
 
