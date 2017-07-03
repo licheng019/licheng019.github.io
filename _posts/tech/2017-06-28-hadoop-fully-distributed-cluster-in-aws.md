@@ -38,24 +38,30 @@ YARN was the framework to run the processing task across multiple machines, mana
 
 ## 2. Preparation on AWS
 
-1). Upload Jdk and Hadoop to AWS
+1) Change the Permission of pem File
+
+	chmod 400 "HadoopTest.pem"
+
+2) Connect to AWS First
+
+	ssh -i "HadoopTest.pem" ubuntu@ec2-xx-xx-xx-xx.compute-1.amazonaws.com
+
+3). Upload Jdk and Hadoop to AWS
 
 	scp -i "HadoopTest.pem" hadoop-2.7.3.tar.gz ubuntu@ec2-xx-xxx-xxx-xxx.compute-1.amazonaws.com:~/ (HadoopTest.pem is the keyPair file download from aws when the instance is launched.)
 
-2). Login to the AWS
-
-	ssh -i "HadoopTest.pem" ubuntu@ec2-xx-xxx-xxx-xxx.compute-1.amazonaws.com
-
-3). Unzip File
+4). Unzip File
+	
+	Relogin to the AWS Server again.
 
 	tar xzvf hadoop-2.7.3.tar.gz
 	tar zxvf jdk-18u3xxxx.tar.gz
 
-4). Copy JDK to /usr/lib
+5). Copy JDK to /usr/lib
 
 	cp -R jdk1.8 /usr/lib
 
-5). Set up Environment Variable
+6). Set up Environment Variable
 	
 	sudo vi ~/.bashrc
 	export HADOOP_PREFIX=/home/ubuntu/hadoop-2.7.3
@@ -73,7 +79,7 @@ YARN was the framework to run the processing task across multiple machines, mana
 	source ~/.bashrc
 	source /etc/profile
 
-6). Modify hosts File
+7). Modify hosts File
 
 Add all ip -> address map in /etc/hosts file.
 
