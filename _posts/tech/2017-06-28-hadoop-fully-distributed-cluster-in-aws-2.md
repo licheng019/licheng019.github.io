@@ -166,55 +166,59 @@ Distributed configuration files to all machines.
 
 4). How to trigger the set up
 
-step1: For every journalnode, input below command.
+step1:For every journalnode, input below command.
+
 	sbin/hadoop-daemon.sh start journalnode
 
-step2: In nn1, format the namenode, and then start
+step2:In nn1, format the namenode, and then start
+
 	bin/hdfs namenode -format
 	sbin/hadoop-daemon.sh start namenode
 
-step3: In machine nn2, Synchronize the meta data information
+step3:In machine nn2, Synchronize the meta data information
+
 	bin/hdfs namenode –bootstrapStandby
 
 step4:Start machine nn2
+
 	sbin/hadoop-daemon.sh start namenode
 
-step5：Start all DataNode
+step5:Start all DataNode
 
-step6: Choose one machine to be the active machine (manually start up)
+step6:Choose one machine to be the active machine (manually start up)
 
 	bin/hdfs haadmin -transitionToActive nn1
 
 5). Automatic Failover
 
-0. After Start up, every machine is in standby status, and then choose one be the active by election.
+After Start up, every machine is in standby status, and then choose one be the active by election.
 
 Monitor by using ZKFC failover.
 
-1. Modify the hdfs-site.xml
+Modify the hdfs-site.xml
 
 	<property>
 	   <name>dfs.ha.automatic-failover.enabled</name>
 	   <value>true</value>
 	</property>
 
-2. Modify the core-site.xml
+Modify the core-site.xml
 
-  <property>
-    <name>ha.zookeeper.quorum</name>
-    <value>zk1.example.com:2181,zk2.example.com:2181,zk3.example.com:2181</value>
-  </property>
+	<property>
+	  <name>ha.zookeeper.quorum</name>
+	  <value>zk1.example.com:2181,zk2.example.com:2181,zk3.example.com:2181</value>
+	</property>
 
-3. How to start the set up
+How to start the set up
 
-  sbin/stop-dfs.sh
+	sbin/stop-dfs.sh
 
-  under zookeeper
-  bin/zkServer.sh start
-  
-  under hadoop
-  bin/hdfs zkfc –formatZK
-  sbin/start-dfs.sh
+	under zookeeper
+	bin/zkServer.sh start
+
+	under hadoop
+	bin/hdfs zkfc –formatZK
+	sbin/start-dfs.sh
 
 
 
