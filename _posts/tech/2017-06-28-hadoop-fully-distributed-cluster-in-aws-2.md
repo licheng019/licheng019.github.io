@@ -32,26 +32,25 @@ dfs.namenode.secondary.http-address = address:50090
 ## 1. Add JobHistory
 
 1). Modify mapred-site.xml
-
 	<property>
-    	<name>mapreduce.jobhistory.address</name>
-    	<value>http://ec2-52-54-83-82.compute-1.amazonaws.com:10020</value>
+      <name>mapreduce.jobhistory.address</name>
+      <value>http://ec2-52-54-83-82.compute-1.amazonaws.com:10020</value>
 	</property>
 	<property>
-	    <name>mapreduce.jobhistory.webapp.address</name>
-	    <value>http://ec2-52-54-83-82.compute-1.amazonaws.com:19888</value>
+	  <name>mapreduce.jobhistory.webapp.address</name>
+      <value>http://ec2-52-54-83-82.compute-1.amazonaws.com:19888</value>
 	</property>
 
 2). Modify yarn-site.xml
-
 	<property>
-		<name>yarn.log-aggregation-enable</name>
-	    <value>true</value>
+      <name>yarn.log-aggregation-enable</name>
+      <value>true</value>
 	</property>
+
 	(Below is optional)
 	<property>
-	    <name>yarn.log-aggregation.retain-seconds</name>
-	    <value>106800</value>
+      <name>yarn.log-aggregation.retain-seconds</name>
+      <value>106800</value>
 	</property>
 
 Distributed all configuration to every node.
@@ -203,9 +202,8 @@ Monitor by using ZKFC failover.
 	</property>
 
 3. How to start the set up
-
 	sbin/stop-dfs.sh
-	
+
 	under zookeeper
 	bin/zkServer.sh start
 
