@@ -208,10 +208,8 @@ Monitor by using ZKFC failover.
 3. How to start the set up
 
 	sbin/stop-dfs.sh
-
 	under zookeeper
 	bin/zkServer.sh start
-
 	under hadoop
 	bin/hdfs zkfc –formatZK
 	sbin/start-dfs.sh
