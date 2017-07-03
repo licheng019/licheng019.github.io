@@ -32,6 +32,7 @@ dfs.namenode.secondary.http-address = address:50090
 ## 1. Add JobHistory
 
 1). Modify mapred-site.xml
+
 	<property>
       <name>mapreduce.jobhistory.address</name>
       <value>http://ec2-52-54-83-82.compute-1.amazonaws.com:10020</value>
@@ -42,6 +43,7 @@ dfs.namenode.secondary.http-address = address:50090
 	</property>
 
 2). Modify yarn-site.xml
+
 	<property>
       <name>yarn.log-aggregation-enable</name>
       <value>true</value>
@@ -190,18 +192,21 @@ step6: Choose one machine to be the active machine (manually start up)
 Monitor by using ZKFC failover.
 
 1. Modify the hdfs-site.xml
+
 	<property>
 	   <name>dfs.ha.automatic-failover.enabled</name>
 	   <value>true</value>
 	</property>
 
 2. Modify the core-site.xml
+
 	<property>
 	   <name>ha.zookeeper.quorum</name>
 	   <value>zk1.example.com:2181,zk2.example.com:2181,zk3.example.com:2181</value>
 	</property>
 
 3. How to start the set up
+
 	sbin/stop-dfs.sh
 
 	under zookeeper
