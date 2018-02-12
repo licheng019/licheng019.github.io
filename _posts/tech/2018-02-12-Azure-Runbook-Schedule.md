@@ -3,7 +3,7 @@ layout: post
 title: Customzie Scheduler on Runbook
 category: Azure
 tags: Azure
-description: Customzie Scheduler on Runbook
+description: Customize Scheduler on Runbook
 ---
 
 ## Why we need to Customize Scheduler 
