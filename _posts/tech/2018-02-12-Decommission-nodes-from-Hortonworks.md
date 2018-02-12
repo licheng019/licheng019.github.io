@@ -2,7 +2,7 @@
 layout: post
 title: Decommission nodes from Hortonworks HDP
 category: Hortonworks
-tags: Hortonworks Hadoop
+tags: Hortonworks
 description: This page is going to talk about how to add volume on existing node in AWS and decommission nodes from Hortonworks HDP
 ---
 
