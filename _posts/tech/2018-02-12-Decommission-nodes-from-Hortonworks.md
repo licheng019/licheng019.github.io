@@ -42,7 +42,7 @@ How to add volume to existing node?
 
 6) Update HDFS Config if the Data directory changed.
 
-   Such as /mnt/data1/hadoop/hdfs/data,/mnt/data2/hadoop/hdfs/data
+	Such as /mnt/data1/hadoop/hdfs/data,/mnt/data2/hadoop/hdfs/data
 
 7) Repeat process to add more volumns
 
