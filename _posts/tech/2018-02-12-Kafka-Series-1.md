@@ -26,8 +26,8 @@ description: This series going to talk about Kafka and record what I learned abo
 
 4) Partition：One topic includes multiple partition, when producer send messages, it will send to different partitions based on keys. There are two characters for one partition
 
-      	order: based on timeline of kafka message in有序：按照进入kafka的时间排序
-     	immute: The data can't be change
+      	In order: based on timeline of kafka message in.
+     	Immutable: The data can't be change.
 
 5) Producer：data producer
 
