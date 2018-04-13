@@ -63,3 +63,7 @@ Whenever a broker stops or crashes leadership for that broker's partitions trans
 1) Manually: bin/kafka-preferred-replica-election.sh -zookeeper zkserver1:2181,zkserver2:2181
 
 2) Automatically: Set up auto.leader.rebalance.enable=true
+
+## Future
+
+Since I am using Kafka-Manager to mange my team's Kafka Cluster. I am going to talk about the Kafka Manager in next blog.
