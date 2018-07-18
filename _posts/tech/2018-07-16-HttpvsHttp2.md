@@ -46,11 +46,11 @@ So Actually Http2 is more about solving the issues with TCP than it is about fix
 
 ## Why HTTP2 is better
 
-1.) Transport by using Binary.
+#### 1.) Transport by using Binary.
 
 HTTP2 , to begin with, the exchange is no longer based on plain text but on binary, the binary message contains much the same as the http1.1 protocol does, which is verb, resource and any headers.
 
-2.) Make Header more efficient
+#### 2.) Make Header more efficient
 
 Because most of the response header are same except ETag,Expires and size etc. So it uses HPACK to do the compress. This specification defines HPACK, a compression format for efficiently representing HTTP header fields, to be used in HTTP/2
 use hpack for header compression. There are tow types of tables introduced in here.
@@ -61,7 +61,7 @@ static and dynamic tables
 
 	The Static table has a list of frequently known and used headers such as method,user agent, referrer
 
-3.) How stream works? 
+#### 3.) How stream works? 
 
 Http2 only has one single connection per host
 
@@ -70,7 +70,7 @@ Multiplexing -> is a technique in which multiple signals are combined into a sin
 The weight in stream works for priority.
 
 
-4.) Server Push
+#### 4.) Server Push
 
 HTTP1.x is doing for asking a lot of resources does impact load time, even sharing the same TCP connection
 
@@ -95,7 +95,7 @@ Requirement for this Push
 
 ## Security
 
-1.) Is SSL or TLS the same thing?
+#### 1.) Is SSL or TLS the same thing?
 
 	SSL is Secure Sockets Layer
 	TLS is Transport Layer Security
@@ -108,7 +108,7 @@ authentication: which means I can now identify myself, knowing who is talking to
 integrity: It validates the data against this being tampered with or modified during the connection
 
 
-2.) Caching head in HTTP
+#### 2.) Caching head in HTTP
 
 	1. Expires
 	2. Etag
@@ -116,38 +116,38 @@ integrity: It validates the data against this being tampered with or modified du
 
 ## Ways to improve performance
 
-# 1.) Multiple TCP Connections
+#### 1.) Multiple TCP Connections
 
 Open more request trying to improve load time and kind of parallelize these requests
 The browsers usually restrict the number of simultaneous to 6. So domain sharding will work for this.
 
 Negative part: A socket requires resources, TCP Overhead and DNS Lookups for each server
 
-### 2.) Concatenation
+#### 2.) Concatenation
 
 Negative: Complexity to build process, Impacts caching, Impacts rendering.
 
 Http2 gives proper multiplexing and multiple stream support.
 
-3.) Spriting 
+#### 3.) Spriting 
 
 Replace all images to one image
 
 Negative: Make development harder. Impacts caching. Impacts rendering
 
-4.) Minifying
+#### 4.) Minifying
 
 Make files smaller, Such as removing unnecessary white space from js, css
 Negative: Complexity to build process.
 
 This solution still works for HTTP2.
 
-5.) Inline resources
+#### 5.) Inline resources
 
 Negative: Impacts developement, Impacts caching
 
 HTTP2 drop Inline, try to use server push instead.
 
-6.) Working with CDN
+#### 6.) Working with CDN
 
 This solution still works for HTTP2.
