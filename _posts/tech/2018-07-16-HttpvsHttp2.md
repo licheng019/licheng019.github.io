@@ -69,4 +69,85 @@ Multiplexing -> is a technique in which multiple signals are combined into a sin
 
 The weight in stream works for priority.
 
-TO BE CONTINUED
+
+4.) Server Push
+
+HTTP1.x is doing for asking a lot of resources does impact load time, even sharing the same TCP connection
+
+How to avoid additional request?
+
+One solution is using inline resources, it is not the best solution. It prevents potential caching of resources, as well as making reuse a bit harder.
+
+Http2 is using Server Push
+
+	Ex: The server knows every time when the client ask for index.html, it will require style.css and script.js as well. So when the client send request for index.html. The server will push style.css and script.js to the client
+
+How this really work?
+
+	When client send a request such as index.html. The server sends a PUSH_PROMISE Frame back.This frame sent on the same stream as the original request, in this case the one that carries index.html. The frame carries a stream Id, the stream id is originated from the server, have even number
+
+Requirement for this Push
+
+	1. Must be safe, can't be impact on the resource itself
+	2. Cachable
+	3. No include a request body
+	4. SETTINGS_ENABLE_PUSH (If this sets to 0, then stop pushing)
+
+## Security
+
+1.) Is SSL or TLS the same thing?
+
+	SSL is Secure Sockets Layer
+	TLS is Transport Layer Security
+	TLS is the successor to SSL 3
+	TLS has overhead
+
+TLS provides three things -- encryption, which allows communication to be transmitted securely without eavesdropping, and it doesn't so by using symmetrical encryption and an initial asymmetric encryption
+
+authentication: which means I can now identify myself, knowing who is talking to who
+integrity: It validates the data against this being tampered with or modified during the connection
+
+
+2.) Caching head in HTTP
+
+	1. Expires
+	2. Etag
+	3. Cache-Control
+
+## Ways to improve performance
+
+1.) Multiple TCP Connections
+
+Open more request trying to improve load time and kind of parallelize these requests
+The browsers usually restrict the number of simultaneous to 6. So domain sharding will work for this.
+
+Negative part: A socket requires resources, TCP Overhead and DNS Lookups for each server
+
+2.) Concatenation
+
+Negative: Complexity to build process, Impacts caching, Impacts rendering.
+
+Http2 gives proper multiplexing and multiple stream support.
+
+3.) Spriting 
+
+Replace all images to one image
+
+Negative: Make development harder. Impacts caching. Impacts rendering
+
+4.) Minifying
+
+Make files smaller, Such as removing unnecessary white space from js, css
+Negative: Complexity to build process.
+
+This solution still works for HTTP2.
+
+5.) Inline resources
+
+Negative: Impacts developement, Impacts caching
+
+HTTP2 drop Inline, try to use server push instead.
+
+6.Working with CDN
+
+This solution still works for HTTP2.
