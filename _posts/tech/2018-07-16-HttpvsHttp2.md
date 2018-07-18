@@ -116,14 +116,14 @@ integrity: It validates the data against this being tampered with or modified du
 
 ## Ways to improve performance
 
-#1.) Multiple TCP Connections
+# 1.) Multiple TCP Connections
 
 Open more request trying to improve load time and kind of parallelize these requests
 The browsers usually restrict the number of simultaneous to 6. So domain sharding will work for this.
 
 Negative part: A socket requires resources, TCP Overhead and DNS Lookups for each server
 
-###2.) Concatenation
+### 2.) Concatenation
 
 Negative: Complexity to build process, Impacts caching, Impacts rendering.
 
