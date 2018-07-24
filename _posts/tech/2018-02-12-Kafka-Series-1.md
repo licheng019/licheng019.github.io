@@ -16,6 +16,32 @@ description: This series going to talk about Kafka and record what I learned abo
 
 3) It lets you process streams of records as they occur.
 
+## Why Apache Kafka?
+
+1). Decouping of data streams
+
+2). Distributed, resilient architecture, fault tolerant
+
+3). Horizontal scalability
+
+4). High performance(latency of less than 10ms) - real time
+
+## What is the use case for Kafka?
+
+1). Messaging system
+
+2). Activity Tracking
+
+3). Gather metrics from many different locations
+
+4). Application Logs gathering
+
+5). Stream processing(with the Kafka Streams API or Spark for example)
+
+6). Decoupleing of system dependencies
+
+7). Integration with Spark, Flink, Storm, Hadoop and many other Big Data technologies
+
 ## Kafka Terms
 
 1) Message：Messages consist of a variable-length header, a variable length opaque key byte array and a variable length opaque value byte array. There are four parts of message(offset, key, value, timestamp).
